@@ -152,3 +152,151 @@
 
 // ////////////////////////////  For loop
 
+// for (initialExpression; condition; increment/decrement) {
+//     code...
+// }
+
+// for (let i =0; i<10 ; i++){
+//     console.log(i);
+    
+// }
+
+/////////////////////// while loop
+
+// while (condition) {
+//     code ...
+// }
+
+// let i = 10;
+// while (i>0){
+//     console.log(i);
+//     i--;
+// }
+
+
+// //////////////////// do while loop
+
+// let i = 10;
+// do {
+//     console.log(i);
+//     i++;
+// } while(i <= 5);
+
+
+// //////////// Logical Operator
+
+// 1. ---> AND (&&)
+// 2. ---> OR (||)
+// 3. ---> NOT (!)
+
+
+// ///////// Array
+
+// let fruits = ["apple", "banana", "orange",23];
+// console.log(fruits);
+// console.log(typeof(fruits[3]));
+
+///////////////// Array Methods
+
+// const array = [];
+
+// array.concat();  // joins two or more array and returns a result
+// array.includes(); // checks if an array contains a specified element
+// array.push();   // adds a new element to the end of an array and returns the new length of an array
+// array.unshift(); // adds a new element to the beginning of an array and returns the new length of an array
+// array.pop();  // removes the last element of an array and returns the removed element
+// array.shift(); // removes the first element of an array and returns the removed element
+// array.sort();  // sorts the elements alphabetically in strings and in ascending order
+// array.slice(); // selects the part of an array and returns the new array
+// array.splice(); // removes or replaces existing elements and/or adds new elements
+
+// const array = ['c', 'c++', 'Python', 'Js'];
+// const arr2 = ['html', 'css'];
+
+// console.log(array.concat(arr2));
+
+// console.log(array.includes("html"));
+
+// array.push("html");
+// console.log(array);
+
+// array.unshift("css");
+// console.log(array);
+
+// array.pop();
+// console.log(array);
+
+// array.shift();
+// console.log(array);
+
+// array.sort();
+// console.log(array);
+
+
+// const arr3 = ['a','c','d','b'];
+// arr3.sort();
+// console.log(arr3);
+
+// console.log(array.slice(0,2));
+// console.log(array);
+
+
+// array.splice(1,2);
+// console.log(array);
+
+
+// ///////////// Object
+
+// const obj = {
+//     key:value,
+//     key2: value2,
+// }
+
+// const person = {
+//     name: "Abhishek",
+//     age: 22,
+//     profession: ["Full-Stack Developer", "Data-Analyst", "Data-Scientist", "Ai model Developer"],
+// }
+// console.log(person);
+
+
+// console.log(person.name);
+// console.log(person['age']);
+// console.log(person['profession']);
+// console.log(person['profession'][0]);
+
+// delete person.age;
+// console.log(person);
+
+
+// //////////// Functions
+
+// function name(parametersIfAny) {.....}
+
+// function greet(name = "Guest") {
+//     console.log(`Hello ${name}`);
+// }
+
+// greet();
+// greet("abhishek");
+
+// function add(x, y) {
+//     return x+y;
+// }
+
+// console.log(add(3,4));
+
+
+// /////////////// call back function
+
+// When we provide function as an (argument) to other function that argument function is known as callback function.
+
+// function showCallFunc(fn){
+//     const value = 10;
+//     fn(value);
+// }
+
+// showCallFunc(function (value) {
+//     console.log(value);                   // 10
+// });               
+
