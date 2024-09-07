@@ -300,3 +300,184 @@
 //     console.log(value);                   // 10
 // });               
 
+
+// //////// Global Vs Local Variable
+
+// let message = "hi";  // global
+// console.log(message);  // hi
+
+// function showMessage () {
+//     let message = "hello";  // local  (accessible only in this curly braces)
+//     console.log(message);  // hello
+    
+// }
+
+// console.log(message);  // hi
+
+
+/////////////  Method Or Function In JavaScript Object
+
+// const person = {
+//     name : "Abhishek",
+//     age: 22,
+//     // Defining method in object
+//     greet: function () {
+//         return `Hello, my name is ${this.name} & I am ${this.age} years old.`;   
+//     },
+// };
+
+// console.log(person.greet());
+
+// ////////////////// JSON (JavaScript Object Notation)
+
+// JSON (JavaScript Object Notation) is a lightweight data format used for storing and exchanging data. It is easy for humans to read and write and easy for machines to parse and generate. Since you're learning JavaScript, handling JSON is very natural as JSON is built into the language.
+
+// JSON is primarily used to represent structured data as key-value pairs, similar to objects in JavaScript. Here's an example:
+// {
+//     "name": "Abhishek",
+//     "age": 22,
+//     "isStudent": true,
+//     "skills": ["JavaScript", "Python", "Machine Learning"]
+//   }
+  
+// 2. Basic JSON structure:
+// Objects are written as key-value pairs, enclosed in curly braces {}.
+// Arrays are written in square brackets [] and can contain values like strings, numbers, or even other objects.
+// Strings must be in double quotes " ".
+// Booleans: true or false.
+// Numbers: can be integers or floats, written without quotes.
+
+// 3. Converting JavaScript objects to JSON (Serialization):
+// To send or store data in JSON format, you convert (serialize) a JavaScript object to JSON using JSON.stringify().
+
+// const person = {
+//     name: "Abhishek",
+//     age: 22,
+//     isStudent: true
+//   };
+  
+// const jsonString = JSON.stringify(person);
+// console.log(jsonString);  // Output: {"name":"Abhishek","age":22,"isStudent":true}
+ 
+
+// 4. Converting JSON to JavaScript objects (Deserialization):
+// To read or use JSON data, you convert (deserialize) JSON to a JavaScript object using JSON.parse().
+
+// const jsonString = '{"name":"Abhishek","age":22,"isStudent":true}';
+// const person = JSON.parse(jsonString);
+
+// console.log(person.name);  // Output: Abhishek
+// console.log(person.age);   // Output: 22
+// console.log(person);
+
+// 5. Handling JSON in JavaScript (Example)
+// Let’s look at a full example where you serialize a JavaScript object to JSON and then deserialize it back to an object:
+
+// JavaScript object
+// const person = {
+//     name: "Abhishek",
+//     age: 22,
+//     skills: ["JavaScript", "Python", "Machine Learning"]
+//   };
+  
+//   // Convert object to JSON string
+//   const jsonString = JSON.stringify(person);
+//   console.log("Serialized JSON:", jsonString);
+  
+//   // Convert JSON string back to object
+//   const parsedPerson = JSON.parse(jsonString);
+//   console.log("Deserialized object:", parsedPerson);
+//   console.log("Name:", parsedPerson.name);
+  
+
+
+// /////////////  Date And Time
+
+// let currentDate = new Date();
+// console.log(currentDate);
+
+// passing date in Date() year, month, day, hours, minutes, seconds, milliseconds
+
+// currentDate = new Date(2024, 2, 24, 12, 30, 0, 0);
+// console.log(currentDate);
+
+
+// const currentDate = new Date();
+// console.log(currentDate);
+
+// const year = currentDate.getFullYear();
+// const month = currentDate.getMonth();
+// const date = currentDate.getDate();
+// const day = currentDate.getDay();
+// const hours = currentDate.getHours();
+// const minutes = currentDate.getMinutes();
+// const milliseconds = currentDate.getMilliseconds();
+
+// console.log(`Year : ${year}`);
+// console.log(`Month : ${month}`);
+// console.log(`Date : ${date}`);
+// console.log(`Day : ${day}`);
+// console.log(`Hours : ${hours}`);
+// console.log(`Minutes : ${minutes}`);
+// console.log(`Milliseconds : ${milliseconds}`);
+
+
+// // different format of a date 
+// const date = new Date();
+
+// console.log(date.toDateString());  // return date as string
+// console.log(date.toISOString);   // return date as iso format
+// console.log(date.toLocaleString());  // Returns a value as a string value appropriate to the host environment's current locale.
+// console.log(date.toLocaleTimeString());  // Returns a time as a string value appropriate to the host environment's current locale.
+
+
+// // increment or decrement year, month, day, time or anything in Date()
+
+// const date = new Date();
+// console.log(date);
+
+// date.setDate(date.getDate() + 1);  // increase date by 1 
+// console.log(date);
+
+// date.setFullYear(2000);     // set year 2000  
+// console.log(date);
+
+
+
+// setInterval  And setTimeOut
+
+// 1. setTimeout()
+// setTimeout() is used to run a function once after a specified delay (in milliseconds). (only one time function will run)
+
+// syntax :- setTimeout(function, delay, arg1, arg2, ...);
+
+// function: The function to be executed.
+// delay: Time in milliseconds to wait before executing the function.
+// arg1, arg2, ...: Optional arguments that can be passed to the function when it executes.
+
+
+// Display a message after 2 seconds
+setTimeout(function() {
+    console.log("Hello, this is executed after 2 seconds!");
+}, 2000);
+
+
+// You can pass arguments to the function executed by setTimeout().
+
+// function greet(name) {
+//     console.log("Hello, " + name);
+// }
+  
+// setTimeout(greet, 3000, "Abhishek");  // Output: "Hello, Abhishek" after 3 seconds
+  
+
+// 
+// If you set a timeout but want to cancel it before it executes, you can use clearTimeout().
+
+// let timeoutId = setTimeout(function() {
+//     console.log("This will not be executed");
+//   }, 5000);
+  
+//   // Clear the timeout before it executes
+//   clearTimeout(timeoutId);
+  

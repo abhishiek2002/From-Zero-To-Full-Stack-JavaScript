@@ -1,0 +1,10 @@
+{
+    "name": "Abhishek Kuntal",
+    "age": 20,
+    "email": "ak@gmail.com",
+    "skills":["Python", "JavaScript", "AI"],
+    "address": {
+        "city": "New York",
+        "id": true
+    }
+}
