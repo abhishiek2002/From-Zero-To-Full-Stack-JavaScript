@@ -3,18 +3,22 @@
 
 // console.table({name:"Abhishek", age:22})
 
-// Variables
-
+// //////////////////////////////////////// Variables
+// ---------------------------------------
 // (reserved keyword) (variable name) = (value of any type)
 
+// ---------------------------------------
 // Declared variable
 // let name;
 
+// ---------------------------------------
 // Assign value
 // let banana = 'this is banana fruit';
 
 
 ///////////////////////////// Falsy values
+
+// ---------------------------------------
 
 // --> false 
 // --> null 
@@ -27,8 +31,13 @@
 
 
 // ////////////////// string
+
+// ---------------------------------------
+
 // let str1 = "this is a string";
 // let str2 = "This is another string";
+
+// ---------------------------------------
 
 // concate
 // console.log(str1 + str2); // this is a stringThis is a string
@@ -36,17 +45,24 @@
 
 // console.log(str1 + " " + str2);  // this is a string This is a string
 
+// ---------------------------------------
+
 // append
 // console.log(str1 + str2); // this is a stringThis is a string
+
+// ---------------------------------------
 
 // trim
 // let str3 = " this is third    string with extra spaces   "  
 // console.log(str3.trim());  // only starting and last extra spaces
 
+// ---------------------------------------
+
 // lenth
 
 // console.log(str1.length);
 
+// ---------------------------------------
 
 // // cases 
 
@@ -55,6 +71,8 @@
 
 // // lowercase
 // console.log(str2.toLowerCase());
+
+// ---------------------------------------
 
 // // split and join
 // // split function split the string and return an array
@@ -72,6 +90,7 @@
 
 // console.log(typeof(str1.split("").join("")));
 
+// ---------------------------------------
 
 // let desc = `this is some random
 // text
@@ -92,6 +111,8 @@
 
 // ////////////////////////////// type conversion
 
+// ---------------------------------------
+
 // let money = "250";
 
 // convert string to number
@@ -103,6 +124,8 @@
 // console.log(money);
 // console.log(typeof(money));
 
+// ---------------------------------------
+
 // - converting number to string
 
 // let num = 50;
@@ -112,6 +135,8 @@
 
 // console.log(num);
 // console.log(typeof(num));
+
+// ---------------------------------------
 
 // - coverting string to decimal
 
@@ -198,6 +223,8 @@
 
 ///////////////// Array Methods
 
+// ---------------------------------------
+
 // const array = [];
 
 // array.concat();  // joins two or more array and returns a result
@@ -209,6 +236,8 @@
 // array.sort();  // sorts the elements alphabetically in strings and in ascending order
 // array.slice(); // selects the part of an array and returns the new array
 // array.splice(); // removes or replaces existing elements and/or adds new elements
+
+// ---------------------------------------
 
 // const array = ['c', 'c++', 'Python', 'Js'];
 // const arr2 = ['html', 'css'];
@@ -247,10 +276,14 @@
 
 // ///////////// Object
 
+// ---------------------------------------
+// syntax:-
 // const obj = {
 //     key:value,
 //     key2: value2,
 // }
+
+// ---------------------------------------
 
 // const person = {
 //     name: "Abhishek",
@@ -259,11 +292,14 @@
 // }
 // console.log(person);
 
+// ---------------------------------------
 
 // console.log(person.name);
 // console.log(person['age']);
 // console.log(person['profession']);
 // console.log(person['profession'][0]);
+
+// ---------------------------------------
 
 // delete person.age;
 // console.log(person);
@@ -271,14 +307,23 @@
 
 // //////////// Functions
 
+// ---------------------------------------
+
+// syntax:-
 // function name(parametersIfAny) {.....}
+
+// ---------------------------------------
 
 // function greet(name = "Guest") {
 //     console.log(`Hello ${name}`);
 // }
 
+// ---------------------------------------
+
 // greet();
 // greet("abhishek");
+
+// ---------------------------------------
 
 // function add(x, y) {
 //     return x+y;
@@ -302,6 +347,8 @@
 
 
 // //////// Global Vs Local Variable
+
+// ---------------------------------------
 
 // let message = "hi";  // global
 // console.log(message);  // hi
@@ -328,9 +375,12 @@
 
 // console.log(person.greet());
 
+
 // ////////////////// JSON (JavaScript Object Notation)
 
 // JSON (JavaScript Object Notation) is a lightweight data format used for storing and exchanging data. It is easy for humans to read and write and easy for machines to parse and generate. Since you're learning JavaScript, handling JSON is very natural as JSON is built into the language.
+
+// ---------------------------------------
 
 // JSON is primarily used to represent structured data as key-value pairs, similar to objects in JavaScript. Here's an example:
 // {
@@ -339,6 +389,9 @@
 //     "isStudent": true,
 //     "skills": ["JavaScript", "Python", "Machine Learning"]
 //   }
+
+// ---------------------------------------
+
   
 // 2. Basic JSON structure:
 // Objects are written as key-value pairs, enclosed in curly braces {}.
@@ -346,6 +399,8 @@
 // Strings must be in double quotes " ".
 // Booleans: true or false.
 // Numbers: can be integers or floats, written without quotes.
+
+// ---------------------------------------
 
 // 3. Converting JavaScript objects to JSON (Serialization):
 // To send or store data in JSON format, you convert (serialize) a JavaScript object to JSON using JSON.stringify().
@@ -359,6 +414,7 @@
 // const jsonString = JSON.stringify(person);
 // console.log(jsonString);  // Output: {"name":"Abhishek","age":22,"isStudent":true}
  
+// ---------------------------------------
 
 // 4. Converting JSON to JavaScript objects (Deserialization):
 // To read or use JSON data, you convert (deserialize) JSON to a JavaScript object using JSON.parse().
@@ -369,6 +425,8 @@
 // console.log(person.name);  // Output: Abhishek
 // console.log(person.age);   // Output: 22
 // console.log(person);
+
+// ---------------------------------------
 
 // 5. Handling JSON in JavaScript (Example)
 // Let’s look at a full example where you serialize a JavaScript object to JSON and then deserialize it back to an object:
@@ -393,14 +451,19 @@
 
 // /////////////  Date And Time
 
+// ---------------------------------------
+
 // let currentDate = new Date();
 // console.log(currentDate);
+
+// ---------------------------------------
 
 // passing date in Date() year, month, day, hours, minutes, seconds, milliseconds
 
 // currentDate = new Date(2024, 2, 24, 12, 30, 0, 0);
 // console.log(currentDate);
 
+// ---------------------------------------
 
 // const currentDate = new Date();
 // console.log(currentDate);
@@ -421,6 +484,7 @@
 // console.log(`Minutes : ${minutes}`);
 // console.log(`Milliseconds : ${milliseconds}`);
 
+// ---------------------------------------
 
 // // different format of a date 
 // const date = new Date();
@@ -430,6 +494,7 @@
 // console.log(date.toLocaleString());  // Returns a value as a string value appropriate to the host environment's current locale.
 // console.log(date.toLocaleTimeString());  // Returns a time as a string value appropriate to the host environment's current locale.
 
+// ---------------------------------------
 
 // // increment or decrement year, month, day, time or anything in Date()
 
@@ -444,10 +509,14 @@
 
 
 
-// setInterval  And setTimeOut
+// setInterval  And setTimeout
+
+// ---------------------------------------
 
 // 1. setTimeout()
 // setTimeout() is used to run a function once after a specified delay (in milliseconds). (only one time function will run)
+
+// ---------------------------------------
 
 // syntax :- setTimeout(function, delay, arg1, arg2, ...);
 
@@ -455,12 +524,14 @@
 // delay: Time in milliseconds to wait before executing the function.
 // arg1, arg2, ...: Optional arguments that can be passed to the function when it executes.
 
+// ---------------------------------------
 
 // Display a message after 2 seconds
-setTimeout(function() {
-    console.log("Hello, this is executed after 2 seconds!");
-}, 2000);
+// setTimeout(function() {
+//     console.log("Hello, this is executed after 2 seconds!");
+// }, 2000);
 
+// ---------------------------------------
 
 // You can pass arguments to the function executed by setTimeout().
 
@@ -470,8 +541,8 @@ setTimeout(function() {
   
 // setTimeout(greet, 3000, "Abhishek");  // Output: "Hello, Abhishek" after 3 seconds
   
+// ---------------------------------------
 
-// 
 // If you set a timeout but want to cancel it before it executes, you can use clearTimeout().
 
 // let timeoutId = setTimeout(function() {
@@ -480,4 +551,83 @@ setTimeout(function() {
   
 //   // Clear the timeout before it executes
 //   clearTimeout(timeoutId);
+
+// ---------------------------------------
+
+// 2. setInterval()
+// setInterval() is used to repeatedly execute a function at specified intervals (in milliseconds). It continues executing until it is explicitly stopped using clearInterval().
+
+// ---------------------------------------
+
+// syntax :-
+// setInterval(function, interval, arg1, arg2, ...);
+// function: The function to be executed.
+// interval: Time in milliseconds between each execution of the function.
+// arg1, arg2, ...: Optional arguments passed to the function when it executes.
+
+// ---------------------------------------
+
+// // Log a message every 2 seconds
+// setInterval(function() {
+//     console.log("This message repeats every 2 seconds");
+// }, 2000);
+
+// ---------------------------------------
+
+// // To stop the repeated execution of a function, use clearInterval().
+// let intervalId = setInterval(function() {
+//     console.log("Repeating message");
+// }, 1000);
   
+// ---------------------------------------
+
+//   // Stop the interval after 5 seconds
+// setTimeout(function() {
+//     clearInterval(intervalId);
+//     console.log("Interval cleared");
+// }, 5000);
+
+// ---------------------------------------
+
+// 3. Differences Between setTimeout() and setInterval()
+// setTimeout(): Executes the function once after a specified delay. (one time only)
+// setInterval(): Repeatedly executes the function at the specified interval until stopped. (repeatedly)
+
+//////////////////// Template Strings (Template Literals)
+
+// ---------------------------------------
+
+// Template strings (also called template literals) make it easier to create strings, especially when dealing with dynamic values, multiline strings, or complex expressions.
+
+// ---------------------------------------
+
+// Basic Syntax:
+// Template literals use backticks (`) instead of quotes (" or ') to create strings. They allow embedding expressions and variables directly within the string using ${}.
+
+// ---------------------------------------
+
+// const result = (x, y) => x * y;
+// console.log(`The product of 5 and 10 is ${result(5, 10)}`);  // Output: "The product of 5 and 10 is 50"
+
+
+
+//////////////////  Arrow Functions
+
+// Arrow functions (=>) provide a concise way to write functions in JavaScript. They are syntactically shorter and behave differently with respect to the this keyword compared to traditional functions.
+
+// ---------------------------------------
+
+// // Basic Syntax:-
+
+// const functionName = (param1, param2, ...) => {
+//     // Function body
+//     return expression;
+// };
+
+// ---------------------------------------
+
+// If the function has a single expression, you can omit the return keyword and curly braces {}. The value is automatically returned.
+
+// const add = (a, b) => a + b;
+// console.log(add(5, 10));  // Output: 15
+
