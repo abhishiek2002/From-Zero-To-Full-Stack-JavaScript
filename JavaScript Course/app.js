@@ -631,3 +631,209 @@
 // const add = (a, b) => a + b;
 // console.log(add(5, 10));  // Output: 15
 
+
+// const greet = (username) => `Hello ${username}`;
+// console.log(greet("Abhishek"));
+
+
+// ///////////////////  Enhanced object literals 
+
+// ---------------------------------------
+
+// Enhanced object literals in JavaScript provide a cleaner and more concise syntax for defining objects, making it easier to write and manage object properties, methods, and dynamic keys. These enhancements were introduced in ES6 (ECMAScript 2015) and allow for a more expressive and readable way to create objects.
+
+// ---------------------------------------
+
+// 1. Shorthand for Property Assignment
+// In cases where the object key and variable name are the same, you can use a shorthand to avoid repetition.
+
+// const name = "Abhishek";
+// const age = 22;
+
+// const person = {
+//   name: name,
+//   age: age
+// };
+
+// console.log(person);  // Output: { name: "Abhishek", age: 22 }
+
+// ---------------------------------------
+
+// // With Enhanced Object Literals (ES6):
+
+// const name = "Abhishek";
+// const age = 22;
+
+// const person = { name, age };
+
+// console.log(person);  // Output: { name: "Abhishek", age: 22 }
+
+// ---------------------------------------
+
+// 2. Shorthand for Method Definitions
+// You can define methods in an object without the need for the function keyword.
+
+// const person = {
+//     name: "Abhishek",
+//     greet: function() {
+//       console.log("Hello, my name is " + this.name);
+//     }
+//   };
+  
+// person.greet();  // Output: "Hello, my name is Abhishek"
+
+// ---------------------------------------
+
+// With Enhanced Object Literals (ES6):
+
+// const person = {
+//     name: "Abhishek",
+//     greet() {
+//       console.log(`Hello, my name is ${this.name}`);
+//     }
+//   };
+  
+// person.greet();  // Output: "Hello, my name is Abhishek"
+ 
+// ---------------------------------------
+
+// 3. Computed Property Names
+// Computed property names allow you to define property names dynamically using expressions inside square brackets [].
+
+// const prop = "age";
+
+// const person = {
+//   name: "Abhishek",
+//   [prop]: 22
+// };
+
+// console.log(person);  // Output: { name: "Abhishek", age: 22 }
+
+// ---------------------------------------
+
+// 4. Concise Syntax for super
+// When defining methods in an object that is derived from another object, the super keyword allows you to call methods from the prototype of the object. With enhanced object literals, this can be done concisely.
+
+// const parent = {
+//     greet() {
+//       return "Hello from parent";
+//     }
+// };
+  
+// const child = {
+//     greet() {
+//         return `${super.greet()}, and hello from child!`;
+//     }
+// };
+  
+// console.log(child.greet());  // Output: "Hello from parent, and hello from child!"
+  
+
+// //////////////////////////// Spread Operator
+
+// The spread operator (...) in JavaScript allows you to expand an iterable (such as an array, string, or object) into its individual elements. It was introduced in ES6 (ECMAScript 2015) and is widely used for copying, combining, or manipulating arrays and objects.
+
+// ---------------------------------------
+
+// 1. Using the Spread Operator with Arrays
+
+// ---------------------------------------
+
+// Expanding Arrays:
+// The spread operator can be used to "spread" the elements of an array into individual elements.
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1, 4, 5, 6];
+
+// console.log(arr2);  // Output: [1, 2, 3, 4, 5, 6]
+
+// ---------------------------------------
+
+// Copying Arrays:
+// The spread operator can be used to create a shallow copy of an array.
+
+// const originalArray = [1, 2, 3];
+// const copiedArray = [...originalArray];
+
+// console.log(copiedArray);  // Output: [1, 2, 3]
+
+// ---------------------------------------
+
+// Merging Arrays:
+// You can merge two or more arrays using the spread operator.
+
+// const array1 = [1, 2, 3];
+// const array2 = [4, 5, 6];
+// const mergedArray = [...array1, ...array2];
+
+// console.log(mergedArray);  // Output: [1, 2, 3, 4, 5, 6]
+
+// ---------------------------------------
+
+// 2. Using the Spread Operator with Objects
+
+// ---------------------------------------
+
+// Expanding Objects:
+// The spread operator can also be used with objects to copy properties from one object to another or to merge objects.
+
+// const person = { name: "Abhishek", age: 22 };
+// const student = { ...person, major: "Computer Science" };
+
+// console.log(student);  
+// // Output: { name: "Abhishek", age: 22, major: "Computer Science" }
+
+// ---------------------------------------
+
+// Copying Objects:
+// Similar to arrays, the spread operator can be used to create a shallow copy of an object.
+
+// const originalObject = { name: "Abhishek", age: 22 };
+// const copiedObject = { ...originalObject };
+
+// console.log(copiedObject);  // Output: { name: "Abhishek", age: 22 }
+
+// ---------------------------------------
+
+// Merging Objects:
+// You can combine the properties of multiple objects into one using the spread operator.
+
+// const obj1 = { name: "Abhishek" };
+// const obj2 = { age: 22 };
+// const mergedObject = { ...obj1, ...obj2 };
+
+// console.log(mergedObject);  // Output: { name: "Abhishek", age: 22 }
+
+// ---------------------------------------
+
+// Overwriting Properties:
+// When merging objects, properties from the last object will overwrite properties from previous objects.
+
+// const obj1 = { name: "Abhishek", age: 20 };
+// const obj2 = { age: 22, major: "Computer Science" };
+// const updatedObject = { ...obj1, ...obj2 };
+
+// console.log(updatedObject);  // Output: { name: "Abhishek", age: 22, major: "Computer Science" }
+
+// ---------------------------------------
+
+// 3. Using the Spread Operator with Strings
+// The spread operator can also be used to convert a string into an array of individual characters.
+
+// const str = "hello";
+// const chars = [...str];
+
+// console.log(chars);  // Output: ["h", "e", "l", "l", "o"]
+
+// ---------------------------------------
+
+// 4. Function Arguments (Rest vs. Spread Operator)
+// The spread operator can be used in function calls to pass individual elements of an array as arguments.
+
+// const numbers = [1, 2, 3];
+
+// function add(a, b, c) {
+//   return a + b + c;
+// }
+
+// console.log(add(...numbers));  // Output: 6
