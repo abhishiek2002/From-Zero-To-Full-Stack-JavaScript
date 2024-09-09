@@ -837,3 +837,101 @@
 // }
 
 // console.log(add(...numbers));  // Output: 6
+
+
+// /////////////////////////////////// Array Destruturing
+
+// // Array destructuring allows you to extract elements from an array and assign them to variables based on their positions.
+
+// const foo = ['one','two','three'];
+
+// var [one] = foo;
+// console.log(one); // 'one'
+
+// var [one,two] = foo;
+// console.log(one," ",two); // "one two"
+
+// var [one, two, three] = foo;
+// console.log(one, " ", two, " ", three);  // "one two three"
+
+// // Skipping Elements:
+// // You can skip elements in the array by leaving the corresponding variable space empty.
+
+// var [one, ,three] = foo;
+// console.log(one, " ", three);  // "one three"
+
+// // Default Values:
+// // If the array doesn’t have enough elements, you can assign default values.
+
+// var [one, two, three, four = 4] = foo;
+// console.log(four);  // 4
+
+// // Rest Operator with Array Destructuring:
+// // You can use the rest operator (...) to gather the remaining elements into a new array.
+
+// var arr = [1,2,1,3,4,4,5,6,7];
+
+// var [one , two , three , ...rest] = arr;  // rest name is not compulsory
+// console.log(one);   // 1
+// console.log(two);  // 2
+// console.log(three);  // 1
+// console.log(...rest);  // 3 4 4 5 6 7
+// console.log(rest);  // return array of 3 4 4 5 6 7 that is [3, 4, 4, 5, 6, 7]
+// console.log(rest[1]);
+
+// Swapping Variables:
+// Array destructuring can also be used to swap the values of two variables without using a temporary variable.
+
+// var a = 5;
+// var b = 4;
+
+// [a , b] = [b, a];
+// console.log(a); // 4
+// console.log(b); // 5
+
+
+
+// ////////////////////////// Object Destructuring
+
+// Object destructuring allows you to extract properties from objects and assign them to variables by matching the property names.
+
+var obj = {name:"Abhishek", age:22};
+
+var {name , age} = obj;
+
+console.log(name); // "Abhishek"
+console.log(age);  // 22
+
+// Renaming Variables:
+// You can assign the properties to variables with different names.
+
+var {name : person_name, age : person_age } = obj;
+
+console.log(person_name);  // "Abhishek"
+console.log(person_age);  // 22
+
+// Default Values:
+// You can assign default values to variables if the property doesn’t exist in the object.
+
+var obj = {name : "Abhishek"};
+
+var {name , age = 22} = obj;
+
+console.log(name);  // Abhishek
+console.log(age);  // 22
+
+// Destructuring Nested Objects:
+// If an object contains nested objects, you can destructure those as well.
+
+var person = {
+    name : "Abhishek",
+    info : {
+        age : 22,
+        skill : ["Python", "JavaScript", "AI", "C++"]
+    }
+};
+
+var {info : {age , skill}} = person;
+console.log(age);
+console.log(skill);
+
