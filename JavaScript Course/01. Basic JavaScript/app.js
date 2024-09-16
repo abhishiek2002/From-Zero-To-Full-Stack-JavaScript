@@ -866,6 +866,8 @@
 // var [one, two, three, four = 4] = foo;
 // console.log(four);  // 4
 
+// ---------------------------------------
+
 // // Rest Operator with Array Destructuring:
 // // You can use the rest operator (...) to gather the remaining elements into a new array.
 
@@ -893,45 +895,478 @@
 
 // ////////////////////////// Object Destructuring
 
-// Object destructuring allows you to extract properties from objects and assign them to variables by matching the property names.
+// // Object destructuring allows you to extract properties from objects and assign them to variables by matching the property names.
 
-var obj = {name:"Abhishek", age:22};
+// var obj = {name:"Abhishek", age:22};
 
-var {name , age} = obj;
+// var {name , age} = obj;
 
-console.log(name); // "Abhishek"
-console.log(age);  // 22
+// console.log(name); // "Abhishek"
+// console.log(age);  // 22
 
-// Renaming Variables:
-// You can assign the properties to variables with different names.
+// // Renaming Variables:
+// // You can assign the properties to variables with different names.
 
-var {name : person_name, age : person_age } = obj;
+// var {name : person_name, age : person_age } = obj;
 
-console.log(person_name);  // "Abhishek"
-console.log(person_age);  // 22
+// console.log(person_name);  // "Abhishek"
+// console.log(person_age);  // 22
 
-// Default Values:
-// You can assign default values to variables if the property doesn’t exist in the object.
+// // Default Values:
+// // You can assign default values to variables if the property doesn’t exist in the object.
 
-var obj = {name : "Abhishek"};
+// var obj = {name : "Abhishek"};
 
-var {name , age = 22} = obj;
+// var {name , age = 22} = obj;
 
-console.log(name);  // Abhishek
-console.log(age);  // 22
+// console.log(name);  // Abhishek
+// console.log(age);  // 22
 
-// Destructuring Nested Objects:
-// If an object contains nested objects, you can destructure those as well.
+// // Destructuring Nested Objects:
+// // If an object contains nested objects, you can destructure those as well.
 
-var person = {
-    name : "Abhishek",
-    info : {
-        age : 22,
-        skill : ["Python", "JavaScript", "AI", "C++"]
-    }
-};
+// var person = {
+//     name : "Abhishek",
+//     info : {
+//         age : 22,
+//         skill : ["Python", "JavaScript", "AI", "C++"]
+//     }
+// };
 
-var {info : {age , skill}} = person;
-console.log(age);
-console.log(skill);
+// var {info : {age , skill}} = person;
+// console.log(age);
+// console.log(skill);
 
+// //////////// function destructuring
+
+// const person = {
+//     name:"abhishek",
+//     age:22,
+//     country:"India"
+// }
+
+// function printPersonInfo1(person) {
+//     console.log(`Name: ${person.name}`);
+//     console.log(`Age: ${person.age}`);
+//     console.log(`Country: ${person.country}`);
+// }
+
+// printPersonInfo1(person);
+
+// // or we can write
+
+// function printPersonInfo({name, age, country}) {
+//     console.log(`Name: ${name}`);
+//     console.log(`Age: ${age}`);
+//     console.log(`Country: ${country}`);
+// }
+
+// printPersonInfo(person);
+
+// ---------------------------------------
+
+// let options = {
+//     title: "My menu",
+//     items: ['item1', 'item2']
+// };
+
+// function showMenu({title, width: w = 100, height: h = 200, items: [item1, item2]}) {
+//     console.log(`${title} ${w} ${h}`);
+//     console.log(item1);
+//     console.log(item2);
+// };
+
+// showMenu(options);
+
+// //////////// Nested Destructuring
+
+// const songs = [
+//     {name: "Lucky You", singer: "JOyner", duration: 4.44},
+//     {name: "Just LIke You", singer: "NF", duration: 2.44},
+//     {name: "Old Town Road", singer: "Lil Nas X", duration: 3.44},
+// ];
+
+// const [, ,{singer}] = songs;
+
+// console.log(singer);
+
+
+// ////////////// Ternary Operator
+
+// // condition?expressionIfTrue : expressionIfFalse;
+
+// let password = 4;
+
+// function passChecker(ps) {
+//     // if (ps === 8){
+//     //     return 'Strong Password';
+//     // } else {
+//     //     return "Password should be 8 characters.";
+//     // }
+
+//     return ps === 8?'Strong Password' : "Password should be 8 characters.";
+// }
+
+// console.log(passChecker(password));
+
+// const age = 25;
+
+// const isAdult = age >= 18?true:false;
+// console.log(isAdult);
+ 
+
+// ////////// "for...in" loop
+
+// use for specially objects
+
+// const person = {
+//     name : "abhishek",
+//     age:22
+// }
+
+// for (let key in person) {
+//     console.log(key);
+//     console.log(`${person[key]}`);
+// }
+
+// let array = [1 ,2 ,3 ,4 ,5];
+
+// for (let index in array) {
+//     console.log(`${index} : ${array[index]}`);
+// }
+
+// /////////////// "for...of" loop
+
+// use for array
+
+// ///////////////// map() Helper
+
+// let numbers = [1,2,3,4,5];
+
+// let double = numbers.map((num)=>num=num*2);
+// console.log(double);
+// console.log(numbers);
+
+// let peoples = [
+//     {firstName: "Abhishek", lastName: "Kuntal"},
+//     {firstName: "Ankit", lastName: "Meena"},
+// ];
+
+// let firstName = peoples.map((person)=>person.firstName);
+// console.log(firstName);
+
+// // Create array with random numbers.
+// // Map over each item in that array, & multiply each item by 10
+
+// var numbers = [2,433,5,6,65,456];
+
+// function doubleFunction (num) {
+//     return num * 2;
+// };
+
+// var double = numbers.map(doubleFunction);
+// console.log(double);
+
+// ///////////// filter() Helper
+
+// var songs = [
+//     {name: "Lucky You", singer: "JOyner", duration: 4.44},
+//     {name: "Just LIke You", singer: "NF", duration: 2.44},
+//     {name: "Old Town Road", singer: "Lil Nas X", duration: 3.44},
+// ];
+
+// var filtering = songs.filter((song) => song.duration>2.5);
+
+// console.log(filtering);
+
+// var computers = [
+//     {ram: 4, hdd: 100},
+//     {ram: 8, hdd: 200},
+//     {ram: 16, hdd: 300},
+//     {ram: 32, hdd: 400},
+// ];
+
+// var filtering = computers.filter(computer => computer.ram >= 16);
+// console.log(filtering);
+
+// // Iterate over "ages" array
+// // Print only adults, those whos age is greater than 18
+
+// var ages = [21, 22, 21, 22, 23, 12 ,3 , 16, 45];
+
+// console.log("Adults are : ",ages.filter(age => age>=18));
+
+// // Iterate over "words" array
+// // Print only those words which length is greater than 6
+
+// var words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+
+// var filtering = words.filter(word => word.length > 6);
+// console.log(filtering);
+
+// ///////////////////// find() Helper
+
+// var peoples = [
+//     {name:"Abhishek", age:22},
+//     {name:"Ankit", age:23},
+//     {name:"Vikram", age:22},
+//     {name:"Abhishek", age:23},
+// ];
+
+// var finding = peoples.find(person => person.age === 23 & person.name === "Abhishek");
+// console.log(finding);
+
+// var posts = [
+//     {id: 1, content: "Good Post"},
+//     {id: 2, content: "Funny Post"},
+//     {id: 3, content: "Sad Post"},
+// ];
+
+// var postReq = posts.find(post => post.content === "Funny Post");
+
+// console.log(postReq);
+
+// var k = posts.map(post => post.id);
+// console.log(k);  // [1, 2, 3]
+
+// var t = posts.filter(post => post.id);
+// console.log(t);  // [ {id: 1, content: "Good Post"}, {id: 2, content: "Funny Post"}, {id: 3, content: "Sad Post"}];
+
+// /////////////// every() and some() Helper
+
+// var peoples = ['Abhishek', 'Vikram', 'Ankit', 'Abhishek', 'Rahul'];
+
+// console.log(peoples.every(person => person.length>=5)); // true
+// console.log(peoples.every(person => person.length>=8)); // false
+
+// console.log(peoples.some(person => person.length >= 8)); // true
+
+
+// ////////// reduce() Helper
+
+// The reduce() method applies the reducer function to each element of an array, accumulating the results into a single value. It is often used to perform v=calculation or aggregations on array elements and simplify the array into a single value.
+
+// var numbers = [1,2,3,4,4,5];
+
+// var sum = numbers.reduce((acc, num) => acc += num, 0);
+
+// // or
+// var sum = numbers.reduce((acc, current_num) => {
+//     return acc = acc + current_num;
+// }, 0);
+
+// // or
+// var sum = numbers.reduce((acc, current_num) => {
+//     return acc + current_num;
+// }, 0);
+
+// console.log(sum);
+
+
+// // array to object using reduce()
+
+// var fruits = [
+//     "apple",
+//     "banana",
+//     "orange",
+//     "banana",
+//     "apple",
+//     "orange",
+//     "apple",
+//     "grape",
+// ];
+
+// var obj = {}
+
+// fruits.reduce((acc, fruit) => {
+//     return obj[fruit] = (obj[fruit] || 0) + 1 ;
+// }, 0);
+
+// console.log(obj); // {apple: 3, banana: 2, orange: 2, grape: 1}
+
+
+// ///////////////////// Map Data Structure
+
+// Map is a built-in data structure that allows you to store key-value pairs where both the keys and values can be of any data type. It is similar to an object, but with a few key differences.
+
+// Keys can be of any data type: Unlike objects, where keys are limited to strings and symbols, Map allows you to use any data type as keys, including numbers, booleans, objects, and even other Map instances.
+
+// Maintains insertion order: Map preserves the order of key-value pairs as they were inserted, while object keys may not be guaranteed to be in a specific order.
+
+// Iteration: Map provides built-in methods for easy iteration over its elements.
+
+// var map = new Map();
+
+// var keyOne = "string";
+// var keyTwo = {};
+// var keyThree = function () {};
+
+// map.set(keyOne, "Value of key one");
+// map.set(keyTwo, "Value of key two");
+// map.set(keyThree, "Value of key three");
+
+// console.log(map);
+
+// console.log(map.keys());
+// console.log(map.values());
+// console.log(map.delete(keyTwo)); // remove keytwo entry
+// console.log(map);
+
+// console.log(map.has(keyTwo));  // check map has keyTwo or not return boolean
+
+// console.log(map.size);
+
+
+// iteration
+
+// // iterate over Map
+// for (let [key, value] of map) {
+//     console.log(`${key} : ${value}`);
+// }
+
+// // iterate over Keys
+// for (let key of map.keys()) {
+//     console.log(key);
+// }
+
+// // iterate over values
+
+// for (let value of map.values()) {
+//     console.log(value);
+// }
+
+// 1. Create a new Map
+// 2. Set these properties ("a", "b", "c")
+// 3. Set these values (1, 2, 3)
+// 4. Get "a" from that map
+// 5. Check the size of that map
+// 6. Delete the peoperty "b" and then check the size
+
+// var map = new Map();
+
+// map.set("a", 1);
+// map.set("b", 2);
+// map.set("c", 3);
+
+// // map.get("a");
+// console.log(map.get("a"));
+
+// console.log(map.size);
+
+// map.delete("b");
+// console.log(map.size);
+
+
+// /////////////////// Set Data Structure
+
+// Set is a built-in data structure that represents a collection of unique values. Unlike array, Set allows you to store only unique values, which means duplicate values are automatically removed. Each value can occur only once within a Set.
+
+// Set objects are useful while you need to store a list of unique elements and quickly check for the existence of a specific value.
+
+// var set = new Set();
+
+// var set = new Set([1,2,3]);
+// console.log(set); // Set(3) {1, 2, 3}
+
+
+// var intialValues = ["one","two","three"];
+
+// set.add(intialValues); // take initialValues as single entity
+
+// console.log(set); // Set(4) {1, 2, 3, Array(3)}
+
+// console.log(set.has(2)); // true
+// console.log(set.has(44));  // false
+// console.log(set.size);   // 4
+
+
+// set.delete(3);  // remove property 3
+// console.log(set.size);  // 3
+
+// set.clear();
+// console.log(set);
+
+
+// // iterate over Set
+
+// for (let item of set){
+//     console.log(item);
+// }
+
+
+// // 1. Create a Set name (letters)
+// // 2. Add ("a", "b", "c") as properties
+// // 3. Iterate over Set and log the values.
+
+// var set = new Set();
+
+// set.add("a");
+// set.add("b");
+// set.add("c");
+
+// for(let item of set){
+//     console.log(item);
+    
+// }
+
+// ///////////////// Symbols
+
+// Symbol is a unique and immutable primitive data type. 
+
+// A symbol is often used as an identifier for object properties to avoid potential naming conflicts.
+
+// Unlike strings or numbers, symbols are guaranteed to be unique. When you create a symbol, it is unique and can not be recreated or changed. This uniqueness ensures that symbols will  not collide with other property names, even if they have same string representation.
+
+// var mySymbol = Symbol();
+// console.log(typeof(mySymbol)); // symbol
+
+// var mySymbol = Symbol("My custom Symbol");
+// console.log(mySymbol);  // Symbol(My custom Symbol)
+
+// // comparing Symbols
+
+// var mySymbol1 = Symbol("name");
+// var mySymbol2 = Symbol("name");
+
+// var obj = {};
+
+// obj[mySymbol1] = "Value 1";
+// obj[mySymbol2] = "Value 2";
+
+// console.log(obj);
+
+// var symbol1 = Symbol('name');
+// var symbol2 = Symbol('name');
+
+// var Abhishek = {};
+
+// Abhishek.age = 22;
+// Abhishek['gender'] = 'male';
+// Abhishek.age = 21;
+// Abhishek[symbol1] = 'alex';
+// Abhishek[symbol2] = 'john';
+// console.log(Abhishek);
+
+// 1. Create a symbol provide a value of "foo"
+// 2. Check the type of that symbol.
+// 3. Create empty object.
+// 4. Store symbol as the property to that object.
+// 5. Iterate over symbol
+
+// var symbol = Symbol("foo");
+// console.log(typeof symbol);
+
+// var obj = {};
+
+// obj[symbol] = "Value of foo";
+// console.log(obj);
+
+// for (let i in obj){
+//     console.log(obj[i]);
+// }
+
+
+// /////////////////////////////////// DOM (Document Object MOdel)
+
+// When a web page is loaded, the browser creates a Document Object Model of the page.
+// It is a tree like structure.
