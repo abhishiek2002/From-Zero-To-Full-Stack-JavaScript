@@ -34,8 +34,8 @@
 
 // ---------------------------------------
 
-// let str1 = "this is a string";
-// let str2 = "This is another string";
+let str1 = "this is a string";
+let str2 = "This is another string";
 
 // ---------------------------------------
 
@@ -130,7 +130,7 @@
 
 // let num = 50;
 
-// // num = num.toString();
+// num = num.toString();
 // num = String(num);
 
 // console.log(num);
@@ -227,7 +227,7 @@
 
 // const array = [];
 
-// array.concat();  // joins two or more array and returns a result
+// array.concat();  // joins two or more array and returns a result of new array
 // array.includes(); // checks if an array contains a specified element
 // array.push();   // adds a new element to the end of an array and returns the new length of an array
 // array.unshift(); // adds a new element to the beginning of an array and returns the new length of an array
@@ -498,11 +498,11 @@
 
 // // increment or decrement year, month, day, time or anything in Date()
 
-// const date = new Date();
-// console.log(date);
+const date = new Date();
+console.log(date);
 
-// date.setDate(date.getDate() + 1);  // increase date by 1 
-// console.log(date);
+date.setDate(date.getDate() + 1);  // increase date by 1 
+console.log(date);
 
 // date.setFullYear(2000);     // set year 2000  
 // console.log(date);
