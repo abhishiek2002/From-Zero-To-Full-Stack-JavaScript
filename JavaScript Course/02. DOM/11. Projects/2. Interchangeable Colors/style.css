@@ -1,0 +1,44 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.btn{
+    width: 100px;
+    height: 100px;
+}
+
+.purple{
+    background-color: purple;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.teal{
+    background-color: teal;
+}
+

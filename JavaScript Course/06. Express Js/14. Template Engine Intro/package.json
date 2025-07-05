@@ -1,0 +1,18 @@
+{
+  "name": "14.-ejs-course",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Template Engine Setup in Express.js</h1>",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}

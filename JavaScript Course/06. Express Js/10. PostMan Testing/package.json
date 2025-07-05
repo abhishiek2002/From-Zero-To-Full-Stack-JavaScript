@@ -1,0 +1,17 @@
+{
+  "name": "10.-postman-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  }
+}

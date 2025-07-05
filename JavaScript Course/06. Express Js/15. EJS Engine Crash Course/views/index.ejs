@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS Crash Course</title>
+  </head>
+  <body>
+    <!-- For documentation goes to https://ejs.co/#features -->
+
+    <!-- Display Variable -->
+
+    <%= name %> <%= name.toUpperCase() %>
+
+    <!-- Conditional Rendering -->
+
+    <% if(userId === 2) { %>
+    <h1>User ID : <%= userId %></h1>
+    <% } else if (userId === 30) { %>
+    <h2>User ID : <%= userId %></h2>
+    <% } else {%>
+    <h1>Nothing...</h1>
+    <% } %>
+
+    <!-- For loop -->
+
+    <% for (let i =0; i<10; i++) { %>
+    <h1><%= i %></h1>
+    <% } %>
+
+    <!-- for...of loop -->
+    <% const data = [1, 2, 3, 4, 5] %> <% for (num of data) { %>
+    <h1><%= num*2 %></h1>
+    <% } %>
+
+    <!--  -->
+
+    <% var current = new Date(); %> <%= current %>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "abhishek-package",
+  "version": "1.0.0",
+  "description": "the best package",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhishiek2002"
+  },
+  "keywords": [
+    "awesome",
+    "javascript"
+  ],
+  "author": "abhishek-kuntal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

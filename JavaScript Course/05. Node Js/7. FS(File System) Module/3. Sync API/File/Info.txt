@@ -1,0 +1,1 @@
+This file is created only for learning purpose through synchronous fs module.

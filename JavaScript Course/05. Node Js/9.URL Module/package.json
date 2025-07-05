@@ -1,0 +1,13 @@
+{
+  "name": "9.url-module",
+  "version": "1.0.0",
+  "description": "┌────────────────────────────────────────────────────────────────────────────────────────────────┐\r │                                              href                                              │\r ├──────────┬──┬─────────────────────┬────────────────────────┬───────────────────────────┬───────┤\r │ protocol │  │        auth         │          host          │           path            │ hash  │\r │          │  │                     ├─────────────────┬──────┼──────────┬────────────────┤       │\r │          │  │                     │    hostname     │ port │ pathname │     search     │       │\r │          │  │                     │                 │      │          ├─┬──────────────┤       │\r │          │  │                     │                 │      │          │ │    query     │       │\r \"  https:   //    user   :   pass   @ sub.example.com : 8080   /p/a/t/h  ?  query=string   #hash \"\r │          │  │          │          │    hostname     │ port │          │                │       │\r │          │  │          │          ├─────────────────┴──────┤          │                │       │\r │ protocol │  │ username │ password │          host          │          │                │       │\r ├──────────┴──┼──────────┴──────────┼────────────────────────┤          │                │       │\r │   origin    │                     │         origin         │ pathname │     search     │ hash  │\r ├─────────────┴─────────────────────┴────────────────────────┴──────────┴────────────────┴───────┤\r │                                              href                                              │\r └────────────────────────────────────────────────────────────────────────────────────────────────┘\r (All spaces in the \"\" line should be ignored. They are purely for formatting.)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

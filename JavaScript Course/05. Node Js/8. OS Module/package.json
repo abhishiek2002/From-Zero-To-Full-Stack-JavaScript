@@ -1,0 +1,13 @@
+{
+  "name": "8.-os-module",
+  "version": "1.0.0",
+  "description": "The OS module in Node.js provides a number of useful methods for interacting with the operating system. It allows you to gather information about the system, such as the architecture, platform, memory, CPU details, and more.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

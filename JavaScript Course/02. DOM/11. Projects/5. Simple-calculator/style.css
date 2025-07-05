@@ -1,0 +1,63 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 400px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: transparent;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+.inputs select{
+    width: 100%;
+    height: 22px;
+}
+.inputs input{
+    height: 22px;
+    width: 100%;
+    padding: 0 100px;
+}
+.input::placeholder{
+    color: black;
+}
+
+#selectOp{
+    width: 100%;
+}
+
+.submitBtn{
+    background: transparent;
+
+}
+
+.finalResult{
+    width: 50%;
+    height: 50%;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.finalResult p{
+    font-size: xx-large;
+}
